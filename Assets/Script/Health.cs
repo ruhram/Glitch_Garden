@@ -5,6 +5,7 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     [SerializeField] float health = 100f;
+    [SerializeField] GameObject deathVFX;
     // Start is called before the first frame update
     
     public void DealDamage(float damage)
@@ -12,7 +13,15 @@ public class Health : MonoBehaviour
         health -= damage;
         if(health <= 0)
         {
+            TriggerDeathVFX();
             Destroy(gameObject);
         }
+    }
+
+    private void TriggerDeathVFX()
+    {
+        if (!deathVFX) { return; }
+        GameObject deathVFXobject = Instantiate(deathVFX, transform.position, transform.rotation);
+        Destroy(deathVFXobject, 1f);
     }
 }
