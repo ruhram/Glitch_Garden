@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5956611933614143696}
   - component: {fileID: 4489569163092022683}
+  - component: {fileID: 1460594041}
+  - component: {fileID: 4771662943665589916}
   m_Layer: 0
   m_Name: Zucchini
   m_TagString: Untagged
@@ -81,3 +83,58 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1460594041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 592552393765253191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78be2ef3004bde041b53edf61165b2cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+--- !u!60 &4771662943665589916
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 592552393765253191}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.56, y: 0.56}
+    newSize: {x: 0.56, y: 0.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.27654675, y: 0.2558153}
+      - {x: -0.2834535, y: 0.15072978}
+      - {x: -0.23963952, y: 0.12763986}
+      - {x: -0.1653471, y: 0.094632864}
+      - {x: -0.06901169, y: 0.055333853}
+      - {x: -0.0029125214, y: 0.0060038567}
+      - {x: 0.06603885, y: -0.07663751}
+      - {x: 0.13168502, y: -0.17293453}
+      - {x: 0.17108144, y: -0.26272514}
+      - {x: 0.21908283, y: -0.28346157}
+      - {x: 0.286907, y: -0.23508552}
+      - {x: 0.28477168, y: -0.18978238}
+      - {x: 0.24891832, y: -0.1041847}
+      - {x: 0.20289087, y: -0.029036045}
+      - {x: 0.09531304, y: 0.11836965}
+      - {x: -0.051442154, y: 0.23545027}
+      - {x: -0.11798866, y: 0.25236014}
