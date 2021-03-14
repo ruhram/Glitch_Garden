@@ -5,9 +5,10 @@ using UnityEngine;
 public class DefenderSpawner : MonoBehaviour
 {
     Defender defender;
+
     private void OnMouseDown()
     {
-        SpawnDefender(GetSquareClicked());
+        AttemptToPlaceDefender(GetSquareClicked());
         
     }
 
@@ -16,6 +17,16 @@ public class DefenderSpawner : MonoBehaviour
         defender = defenderToSelect;
     }
 
+    private void AttemptToPlaceDefender(Vector2 gridPos)
+    {
+        var starDisplay = FindObjectOfType<StarDisplay>();
+        int defenderCost = defender.GetStarCost();
+        if (starDisplay.HaveEnoughStar(defenderCost))
+        {
+            SpawnDefender(gridPos);
+            starDisplay.spendStars(defenderCost);
+        }
+    }
     private Vector2 GetSquareClicked()
     {
         Vector2 clickPos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
