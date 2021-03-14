@@ -125,6 +125,7 @@ GameObject:
   - component: {fileID: -8564944172164113022}
   - component: {fileID: 1895561333}
   - component: {fileID: 1895561336}
+  - component: {fileID: 2350832192390611454}
   m_Layer: 0
   m_Name: Cactus
   m_TagString: Untagged
@@ -194,3 +195,29 @@ MonoBehaviour:
   projectile: {fileID: 592552393765253191, guid: 850b70e0e9fd2cb46947ca9062a8a76c,
     type: 3}
   gun: {fileID: 2980662384189658532}
+--- !u!61 &2350832192390611454
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6170471561195008822}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
