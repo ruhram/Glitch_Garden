@@ -26,7 +26,8 @@ public class PlayerHealth : MonoBehaviour
 
         if(lives<= 0)
         {
-            FindObjectOfType<LevelLoader>().LoadGameOver();
+            FindObjectOfType<LevelControlller>().HandleLoseCondition();
+         
         }
     }
 

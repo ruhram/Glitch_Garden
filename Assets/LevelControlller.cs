@@ -5,6 +5,7 @@ using UnityEngine;
 public class LevelControlller : MonoBehaviour
 {
     [SerializeField] GameObject winLabel;
+    [SerializeField] GameObject loseLabel;
     [SerializeField] float waitToLoad = 4f;
     int numberOfAttacker = 0;
     bool timerFinished = false;
@@ -12,6 +13,7 @@ public class LevelControlller : MonoBehaviour
     private void Start()
     {
         winLabel.SetActive(false);
+        loseLabel.SetActive(false);
     }
     public void AttackerSpawned()
     {
@@ -33,7 +35,12 @@ public class LevelControlller : MonoBehaviour
         GetComponent<AudioSource>().Play();
         yield return new WaitForSeconds(waitToLoad);
         FindObjectOfType<LevelLoader>().LoadNextScene();
+    }
 
+    public void HandleLoseCondition()
+    {
+        loseLabel.SetActive(true);
+        Time.timeScale = 0;
     }
     public void levelTimerFinished()
     {
